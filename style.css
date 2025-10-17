@@ -52,14 +52,30 @@ ul{
 
 }
 li a{
-    font-family: 'Open Sans';
+    font-family: 'Open Sans', sans-serif;
     font-size: 17px;
     font-weight: 500;
+ 
+}
+li{
+    transition: 0.5s ease;
+    border-radius: .5rem;
+    /* background: #000; */
+    padding: .4rem 1rem ;
+}
+li:hover{
+    /* font-size: 20px; */
+    transform: scale(1.1);
+    background-color: #eadcdc;
 }
 .Signup{
     border: 2px solid black;
     border-radius: 5px;
     padding: 10px;
+    transition: 1s ease;
+}
+.Signup:hover{
+    border: none;
 }
 .header-color{
     position: absolute;
@@ -74,6 +90,12 @@ li a{
     height: 658px;
     right: 107px;
 }
+.header-shadow-top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
 /* *********** */
 /* Index page */
 /* ********* */
@@ -81,6 +103,13 @@ li a{
         margin: 10% 0 0 9%;
         width: 630px;
         height: 530px;
+        position: relative;
+}
+.profile img{
+    position: absolute;
+    top: 21.5%;
+    left: 43%;
+    z-index: -1;
 }
 #profile{
     font-family:'poppins', sans-serif;
@@ -127,11 +156,12 @@ h1{
     font-weight: 500;
     border-radius: 10px;
     border: none;
+    transition: 0.4s ease;
 }
 .find_more:hover{
     cursor: pointer;
     background-color: #816d4d;
- 
+    transform: scale(1.1); 
 }
 .demo{
     height: 46.92px;
@@ -143,6 +173,8 @@ h1{
 .demo:hover{
     cursor: pointer;
     background-color: #ba614d;
+    transition: 0.4s ease;
+    transform: scale(1.1);
 }
 i{
     color: white;
@@ -186,8 +218,47 @@ h2{
     position: relative;
     height: 229px;
     width: 190px;
-    background: transparent;
+    /* background: transparent; */
+    /* border: solid; */
+    transition:  0.5s ease;
+    /* background: #000; */
+    /* background: white; */
+border-radius: .8rem;
 }
+.plane{
+    /* border: solid; */
+/* z-index: 99; */
+background: white ;
+/* background: #000; */
+position: relative;
+}
+.plane:hover{
+    /* background: #000; */
+}
+.plane::before{
+    content: "";
+    position: absolute;
+    border-radius: .5rem 1.5rem .5rem 1.5rem;
+    width: 5rem;
+    height: 5rem;
+    background: rgb(181, 120, 7);
+    bottom: -18%;
+    left: -19%;
+    z-index: -1;
+}
+.box:hover{
+    /* background-color: red; */
+    box-shadow: 0px 2px 10px rgb(56, 44, 44);
+    transform: scale(1.1); 
+    /* z-index: 1; */
+}
+/* .box .image-hover{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 13.2rem;
+} */
+
 .box img{
     position: absolute;
     left: 20%;
@@ -202,6 +273,7 @@ h2{
     position: absolute;
     bottom: 7%;
     left: 10%;
+    /* background: white; */
 }
 .box_description h6{
     font-family: 'Open Sans', sans-serif;
@@ -222,6 +294,11 @@ h2{
     /* border: solid; */
     position: relative;
     margin: 7% auto 4%;
+}
+.etoile-rev{
+    position: absolute;
+    right: -8%;
+    bottom: -20%;
 }
 .Cercls-right{
     position: absolute;
@@ -289,6 +366,7 @@ h2{
     border: none;
     border-radius: 10px;
     font-size: 17px;
+    cursor: pointer;
 }
 /* ************* */
 /* Common footer */
@@ -299,6 +377,7 @@ footer{
     display: flex;
     position: relative;
 }
+
 .foot_1 h6{
     font-family:'Poppins', sans-serif;
     font-size: 44px;
@@ -343,8 +422,13 @@ margin-top: 18%;
 .Cpn_element a{
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
-    line-height: 124.5%;
     color: #5E6182;
+    line-height: 2;
+    padding: .2rem .5rem;
+    border-radius: .5rem;
+}
+.Cpn_element a:hover{
+    background-color: #eadcdc;
 }
 
 .social_icon{
@@ -455,8 +539,14 @@ margin-top: 18%;
 .card{
     position: relative;
     /* border: solid; */
-}
+    transition: .4s ease;
+    cursor: pointer;
 
+}
+.card:hover{
+    transform: scale(1.1);
+
+}
 .card .card_description{
     position: absolute;
     bottom: 30%;
@@ -548,9 +638,8 @@ margin-top: 18%;
     height: auto;
     margin:  8% auto;
     display: flex;
-    /* padding-left: 10%; */
     position: relative;
-    /* background: #000; */
+    /* background: violet; */
 }
 .about_container .intro{
     width: 48%;
@@ -784,7 +873,7 @@ margin-top: 18%;
 .contact img{
     width: 45%;
 }
-#right{
+.right{
     text-align: center;
     color: #5E6282;
     padding-bottom: 2rem;
@@ -820,7 +909,7 @@ margin-top: 18%;
     #menu-icon{
     display: block;
     font-size: 40px;
-}
+    }
     .etoile{
         display: none;
     }
@@ -843,7 +932,140 @@ margin-top: 18%;
     .Cercls-right, .Cercls-left, .icon{
         display: none;
     }
-    footer{
-        margin: 50px 60px 0;
+    .destination{
+        margin: 0px;
     }
+    .card_description{
+        background-color: teal;
+        /* width: 15%; */
+        height: 25%;
+    }
+    .booking{
+        width: 80%;
+        margin: 0 auto;
+        /* background-color: #816d4d; */
+    }
+    .aside{
+        /* background-color: wheat; */
+        width: 80%;
+        text-align: center;
+    }
+    .aside p{
+        margin-top: 20px;
+        font-size: 25px;
+        /* text-align: center; */
+    }
+    .book_steps{
+        width: 500px;
+        margin: 0 auto;
+    }
+    .book_steps p{
+        /* background-color: violet; */
+        font-size: 14px;
+        width: 90%;
+        text-align: center;
+        margin-bottom: 10px;
+        padding-left: 10%;
+    }
+    .slides{
+        display: none;
+    }
+    #text{
+        /* background-color: violet; */
+        margin-left: 12%;
+        width: 100%;
+    }
+    .about_container .intro span{
+    font-size: 40px;
+    }
+    .about_container img{
+    width: 48%
+    }
+    .about_container .intro p{
+        font-size: 15px;
+        /* background-color: #181E4B; */
+        width: 88%;
+    }
+    .about_history{
+        flex-direction: column;
+    }
+    .about_history img{
+        height: 100%;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .about_history p{
+        /* background-color: violet; */
+        width: 150%;
+        margin-left: 25%;
+        margin-top: 5%;
+    }
+    .missions .container{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    /* grid-template-columns: repeat(3, 1fr); */
+}
+.missions span{
+    padding-left: 25%;
+    font-size: 30px;
+}
+.missions .container .card{
+    width: 35%;
+
+}
+footer{
+    margin-left: 10%;
+    /* background: #000; */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: auto;
+}
+.foo_2{
+    flex-direction: column;
+    
+}
+.foot_element{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    /* background: #000; */
+}
+.foot_social{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 180px;
+    align-items: center;
+    margin-top: 10%;
+    /* background: #000; */
+    /* height: auto; */
+}
+.social_icon{
+    /* background: #000; */
+    /* grid-column: 1/2 */
+    margin-bottom: 7%;
+}
+.contact{
+    background-color: wheat;
+}
+.contact .contact-elmt span{
+    background-color: #a4c8ff;
+    font-size: 40px;
+    width: 100%;
+    text-align: center;
+}
+.contact-elmt p{
+        display: none;
+}
+#parag{
+    display: inline;
+    background-color: #b1b2b9;
+    text-align: center;
+
+}
+.contact img{
+    display: none;}
 }
