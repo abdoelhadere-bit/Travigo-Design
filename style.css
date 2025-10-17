@@ -465,35 +465,28 @@ margin-top: 18%;
 
 }
 #instagram {
-    /* (Assuming width/height/border-radius are already set correctly) */
     width: 50px; 
     height: 50px; 
     border-radius: 50%;
     border: none;
     color: white;
-    
-    /* Stronger, more focused radial gradient */
-    background-image: radial-gradient(
+        background-image: radial-gradient(
         circle at center,
         /* Bright Luminous Center */
-        #B8D2F1 0%,       /* Very bright, almost white center */
-        #F289AA 17%,      /* Light pink/lavender glow */
-        
-        /* Main Body Colors (Purple/Pink/Blue) */
-        #C68BF0 29%,      /* Soft Lavender/Purple */
+        #B8D2F1 0%,       
+        #F289AA 17%,     
+        #C68BF0 29%,     
         #D164DA 43%,
         #D164DA 43%,
         #C963E8 61%,
         #BFC2E8 72%,
         #FFC999 80%,
         #D0D8C9 88%,
-        #BAD0F1 93%,    /* Light Purple */
+        #BAD0F1 93%,  
         #a4c8ff 100%,
-        #FFFFFF 100%      /* Faint blue at the very edge (optional) */
+        #FFFFFF 100%   
     );
-    
-    /* Applying a softer shadow for depth, similar to lk.png */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15); 
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15); 
 }
 
 .social_download{
