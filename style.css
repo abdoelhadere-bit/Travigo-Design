@@ -501,6 +501,16 @@ margin-top: 18%;
     justify-content: space-between;
     margin: 0 8%;
 }
+.social_download button{
+    border: none;
+    /* font-size: 17px; */
+    padding: 5px 5px;
+    color: wheat;
+    background-color: #000;
+    border-radius: .5rem;
+    height: 30px;
+    cursor: pointer;
+}
 /* ***************** */
 /* Destination page */
 /* *************** */
